@@ -1,0 +1,241 @@
+h1{
+    margin: 0;
+    padding: 0;
+}
+a{
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    font-size: 1.3em;
+    
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #c0b27d;
+}
+
+.inicioPortfolio {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "menu seccion1";
+    height: 80vh;
+    width: 100%;
+    background: #c0b27d;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  /*MENU*/
+.menu { 
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    } 
+.lista{
+    list-style:none;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-right: 5em;
+    margin-left: 5em;
+    }
+
+
+    /* SUBMENU EN PRUEBA*/
+.submenu{
+    position: absolute;
+    background: #c0b27d;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+    }
+.lista1 a{
+    list-style:circle;
+    font-size: 17px;
+}
+.lista1 a:hover{
+    color:  #3366BB;
+    text-decoration: underline;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    }
+    
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+    }
+
+    /*HASTA ACA SUBMENU*/
+  
+.seccion1 { grid-area: seccion1; }
+
+.contenedorImg{
+    position: relative;
+    text-align: center;
+}
+
+.imgPrincipal{
+    height: 70vh;
+    width: 90%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92); 
+    box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92);
+    
+}
+
+.centrado{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.795);
+    padding: 0 2em 1.5em 2em;
+    border-radius: 7px;
+}
+.fuente{
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+}
+.nombre{
+    margin-bottom: 1em;
+    font-size: 2.5em;
+}
+.icon{
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+
+
+/*FORMULARIO*/
+.centerForm{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    -webkit-box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92); 
+    box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92);
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botonEnviar{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'Comfortaa', cursive;
+}
+.headerForm{
+    height: 10vh;
+    background-color: beige;
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+    font-family:'Comfortaa', cursive;
+    -webkit-box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92); 
+    box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92);
+}
+
+
+
+/*FOOTER*/
+.footer{
+    height: 10vh;
+    background-color: beige;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-around;
+    align-items: center;
+    font-family:'Comfortaa', cursive;
+    -webkit-box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92); 
+    box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92);
+}
+.bi-github{
+    width: 2em;
+    height: 2em;
+}
+
+    
+
+/*MEDIA QUERYS*/
+@media only screen and (max-width: 768px){
+    .inicioPortfolio {
+        height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      }
+    ol, ul{
+        padding-left: 0;
+    }
+    
+    .imgPrincipal{
+    display: none;
+    }
+    .menu{
+        margin-top: 0;
+    }
+        
+    .nombre{
+        word-wrap: break-word;
+    }
+    .centrado{
+        display: none;
+    }
+}
+
+/*Masomenos donde deja de funcionar el responsive REVISAR DESPUES*/
+@media only screen and (max-width: 407px){
+    .inicioPortfolio {
+        height: 100vh;
+      }
+    .headerForm{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+    .contenedorLista {
+        width: 100%;
+    }
+    #ctjob{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 340px){
+    form{
+        width: 100%;
+    }
+    form label input{
+        width: 100%;
+    }  
+}
+
+
+  
