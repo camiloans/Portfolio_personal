@@ -4,9 +4,6 @@ $( "#formulario" ).submit(function( event ) {
     event.preventDefault();
   });
 
-//InsertAfter
-$( "<p>Acepto términos y condiciones.</p>" ).insertAfter( ".termYcond" );
-
 //Click
 $( "#calculadoraBtn" ).click(function() {
     alert( "Disponible a partir del 7/11/21" );
