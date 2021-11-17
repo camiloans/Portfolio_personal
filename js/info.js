@@ -24,28 +24,3 @@ $(document).ready(function(){
     })
 
 })
-
-
-$.ajax({
-    url: 'https://randomuser.me/api/?results=10',
-    method: "GET",
-    dataType: 'json',
-    success: function(data) {
-      console.log(data);
-      mostrarUsuarios(data.results)
-    },
-    error: function(xhr, status, error){
-        console.log(error)
-    }
-  });
-
-  function mostrarUsuarios(usuarios){
-      let ul = document.querySelector('#lista-usuarios');
-      usuarios.forEach(usuario => {
-          ul.innerHTML += `
-            <li>
-                Nombre: ${usuario.name.first} ${usuario.name.last}
-            </li>
-          `
-      })
-  }

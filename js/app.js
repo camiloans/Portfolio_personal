@@ -1,13 +1,12 @@
 //Evento Submit
 $( "#formulario" ).submit(function( event ) {
     alert( "Formulario Enviado");
+    location.reload();
     event.preventDefault();
   });
 
 //Click
-$( "#calculadoraBtn" ).click(function() {
-    alert( "Disponible a partir del 7/11/21" );
-  });
+
 
 
 const inputNombre = formulario.nombreUsuario;

@@ -59,7 +59,7 @@ body{
     background: #c0b27d;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 1.5s;
+    transition: opacity 1s;
     }
 .lista1 a{
     list-style:circle;
@@ -178,36 +178,87 @@ form{
     height: 2em;
 }
 
-#contenedorInfo{
-    height: 40vh;
-}
+
+/*Sobre MI*/
+
 
 .centerInfo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#caja{
-    background: rgba(51, 51, 51, 0.774);
-    border-radius: 4px;
-    color: #fff;
-    width:500px;
-    height: 100px;
-    padding: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 40vh;
+    
 }
 
-#h1{
-    font-weight: 0.5em;
+.imgDev{
+    height: 27vh;
+    width: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92); 
+    box-shadow: 1px 0px 21px 5px rgba(0,0,0,0.92);
 }
-button{
-    margin: 2em;
-    padding: 6px;
+
+.parrafoYo{
+    width: 50%;
+    text-align: center;
+    font-size: 1.6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    margin-left: 2em;
 }
+
+.centerEdu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40vh;
+}
+
+.centerCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridHabilidades {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 28px 28px; 
+    grid-auto-flow: row;
+    grid-template-areas:
+      "gridHab1 gridHab2 gridHab3"
+      "gridHab4 gridHab5 gridHab6"
+      "gridHab7 gridHab8 gridHab9";
+  }
+  
+  .gridHab1 { grid-area: gridHab1; }
+  
+  .gridHab2 { grid-area: gridHab2; }
+  
+  .gridHab3 { grid-area: gridHab3; }
+  
+  .gridHab4 { grid-area: gridHab4; }
+  
+  .gridHab5 { grid-area: gridHab5; }
+  
+  .gridHab6 { grid-area: gridHab6; }
+  
+  .gridHab7 { grid-area: gridHab7; }
+  
+  .gridHab8 { grid-area: gridHab8; }
+  
+  .gridHab9 { grid-area: gridHab9; }
+  
+
+
+
+
 
     
 
@@ -236,6 +287,20 @@ button{
     }
     .centrado{
         display: none;
+    }
+    .imgDev{
+        margin-top: 2em;
+    }
+    .centerInfo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+        
+    }
+    .parrafoYo{
+        overflow: auto;
     }
 }
 
